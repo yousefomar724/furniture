@@ -1,5 +1,6 @@
-/*==-- VARIABLES --==*/
+/*==-- ONLOAD ANIAMATIONS --==*/
 const onLoad = () => {
+    /*==-- VARIABLES --==*/
     const whiteBox = document.querySelector(".white-box");
     const slideImg1 = document.querySelector(".slide-1 img");
     const slidePrice1 = document.querySelector(".item__price p");
@@ -9,6 +10,7 @@ const onLoad = () => {
     const numbers = document.querySelector(".numbers");
     const btn = document.querySelector(".btn");
 
+    /*==-- TIMELINE lITE ANIMATIONS --==*/
     let t1 = new TimelineLite();
 
     t1.fromTo(whiteBox, 1, {height: '0vh'}, {height: '60vh', ease: Power4.easeOut})
@@ -21,6 +23,7 @@ const onLoad = () => {
     .fromTo(btn, 1, {opacity: 0}, {opacity: 1}, 'start')
 };
 
+/*==-- SLIDE ITEMS SCRIPT --==*/
 const showItem = e =>{
     const itemId = e.id;
     const activeLinks = document.querySelector('.activeLink');
@@ -35,6 +38,7 @@ const showItem = e =>{
             slides[i].style.position = "relative";
             slides[i].style.left = 0;
 
+            /*==-- ANIMATION WITH THE SLIDE --==*/
             const img = document.querySelector(`.slide-${itemId} img.item__img`)
             const price = document.querySelector(`.slide-${itemId} div.item__price`)
             const itemName = document.querySelector(`.slide-${itemId} h3.item__name`)
