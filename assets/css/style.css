@@ -117,7 +117,7 @@ nav a{
 }
 /* General Name */
 .general-name{
-    font-size: 10rem;
+    font-size: 8rem;
     font-weight: bolder;
     color: var(--bgColor);
 }
